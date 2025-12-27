@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const SearchBar = () => {
+const SearchBar = ({setSubmittedTerm}) => {
+    const [input, setInput] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSubmittedTerm(input);
+    };
+
     return(
-        <>
-            <h3>Search for properties available for sale or rent</h3>
-            <form>
-                <label>Search</label>
-                <input type="text" />
-            </form>
-            <button>For Sale</button>
-            <button>For Rent</button>
-        </>
+        <form onSubmit={handleSubmit} className="searchbar">
+            {/* <img
+                className="image-icon"
+                src="images/search.png"
+                alt="search"
+                onChange={(e) => setInput(e.target.value)} />  */}
+
+            <input id='search' 
+            type="text"
+            placeholder='Search for peoperties to buy or rent...'
+            onChange={(e) => setInput(e.target.value)} />
+
+            <div className="button-group">
+                <button className="search-button">For Sale</button>
+                <button className="search-button">For Rent</button>
+            </div>
+        </form>
+
+            
+
     );
 };
 

@@ -4,9 +4,14 @@ import ImageCard from './ImageCard';
 const Gallery = ({ properties }) => {
   return (
     <section>
-      {properties.map(property => (
+      {properties.length ===0? (
+        <p>No properties found.</p>
+      ): (
+        properties.map(property => (
         <ImageCard key={property.id} property={property} />
-      ))}
+      ))
+      )}
+      
     </section>
   );
 };
