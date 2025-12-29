@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import {FaRegHeart} from "react-icons/fa";
 
-const SearchBar = ({setSubmittedTerm}) => {
+const SearchBar = ({setSubmittedTerm, toggleFavourites}) => {
     const [input, setInput] = useState('');
 
     const handleSubmit = (e) => {
@@ -9,25 +10,26 @@ const SearchBar = ({setSubmittedTerm}) => {
     };
 
     return(
-        <form onSubmit={handleSubmit} className="searchbar">
-            {/* <img
-                className="image-icon"
-                src="images/search.png"
-                alt="search"
-                onChange={(e) => setInput(e.target.value)} />  */}
-
-            <input id='search' 
-            type="text"
-            placeholder='Search for peoperties to buy or rent...'
-            onChange={(e) => setInput(e.target.value)} />
-
-            <div className="button-group">
-                <button className="search-button">For Sale</button>
-                <button className="search-button">For Rent</button>
+        <header className="main-header">
+            <div className='fav-icon'
+            onClick={toggleFavourites}>
+                <FaRegHeart className='heart-icon'/>
             </div>
-        </form>
 
-            
+    <div className="searchbar">
+
+        <form onSubmit={handleSubmit}>
+            <input
+                id="search"
+                type="text"
+                placeholder="Search for properties to buy or rent..."
+                onChange={(e) => setInput(e.target.value)}
+            />
+        </form>
+    </div>
+</header>
+
+                    
 
     );
 };

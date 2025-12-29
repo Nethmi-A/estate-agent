@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ImageCard = ({ property }) => {
+const ImageCard = ({ property, addToFavourites }) => {
   const {
     type,
     location,
@@ -13,7 +13,9 @@ const ImageCard = ({ property }) => {
 
   return (
     <article className='imageCard'>
-      <img  className='house-picture' src={picture} alt={type}  />
+      <div id='image-wrapper'>
+        <img  className='house-picture' src={picture} alt={type}  />
+      </div>
       {/* <div className='tags'>
         <span className='icon'>
           <img className='image-icon' src="public/images/location.png" alt="location-icon" />
@@ -57,7 +59,8 @@ const ImageCard = ({ property }) => {
       {/* favorite button */}
       <button className='favorite-button'
         onClick={() => addToFavourites(property)}
-        >Add to Favourites</button>
+        >Add to Favourites
+      </button>
     
     </article>
   );
