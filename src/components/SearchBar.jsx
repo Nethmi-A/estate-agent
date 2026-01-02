@@ -11,7 +11,7 @@ const SearchBar = ({setSubmittedTerm, toggleFavourites}) => {
 
     return(
         <header className="main-header">
-            <div className='fav-icon'
+            <div className='fav-icon' title='See Favourites'
             onClick={toggleFavourites}>
                 <FaRegHeart className='heart-icon'/>
             </div>

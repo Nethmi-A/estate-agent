@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const ImageCard = ({ property, addToFavourites }) => {
   const {
@@ -11,10 +12,20 @@ const ImageCard = ({ property, addToFavourites }) => {
     description
   } = property;
 
+  const handleDragStart = (e) => {
+    e.dataTransfer.setData("propertyId", property.id);
+  };
+
+
   return (
-    <article className='imageCard'>
+    <article className='imageCard'
+      draggable
+      onDragStart={handleDragStart}>
       <div id='image-wrapper'>
-        <img  className='house-picture' src={picture} alt={type}  />
+        <Link to={`/property/${property.id}`}>
+          <img className='house-picture' src={picture} alt={type}  />
+        </Link>
+        
       </div>
       {/* <div className='tags'>
         <span className='icon'>

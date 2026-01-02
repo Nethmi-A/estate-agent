@@ -8,7 +8,17 @@
 			"tenure":"Freehold",
 			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
 			"location":"Petts Wood Road, Petts Wood, Orpington BR5",
-			"picture":"public/images/prop1.jpg",
+            "picture":"/images/prop1/prop1.jpg",
+			"pictures":[
+                "/images/prop1/prop1.jpg",
+                "/images/prop1/living-room.jpg",
+                "/images/prop1/kitchen.avif",
+                "/images/prop1/bedroom1.webp",
+                "/images/prop1/bedroom2.webp",
+                "/images/prop1/bedroom3.jpg",
+                "/images/prop1/bathroom.jpg",
+                "/images/prop1/floor-plan.webp"
+            ],
 			"url":"properties/prop1.html",
             "added": {
                 "month":"October",
@@ -24,7 +34,17 @@
 			"tenure":"Freehold",
 			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
 			"location":"Crofton Road Orpington BR6",
-			"picture":"public/images/prop2.jpg",
+            "picture":"/images/prop2/prop2.jpg",
+			"pictures":[
+                "/images/prop2/prop2.jpg",
+                "/images/prop2/living-room.jpg",
+                "/images/prop2/kitchen.jpg",
+                "/images/prop2/bedroom1.jpg",
+                "/images/prop2/bedroom2.webp",
+                "/images/prop2/bathroom.jpg",
+                "/images/prop2/balcony.jpg",
+                "/images/prop2/floor-plan.jpg"
+            ],
 			"url":"properties/prop2.html",
             "added": {
                 "month":"September",
@@ -40,7 +60,17 @@
             "tenure": "Freehold",
             "description": "A beautifully presented four-bedroom detached family home with spacious interiors. <br>The property features a large living room, modern kitchen with integrated appliances, and a dining area leading to a landscaped rear garden. <br>The master bedroom includes an en-suite bathroom, while the remaining bedrooms are generously sized. <br>Located close to schools, parks, and transport links.",
             "location": "Oakwood Avenue Bromley BR2",
-            "picture": "public/images/prop3.jpg",
+            "picture":"/images/prop3/prop3.jpg",
+            "pictures": [
+                "/images/prop3/prop3.jpg",
+                "/images/prop3/living-room.jpg",
+                "/images/prop3/kitchen.webp",
+                "/images/prop3/bedroom1.avif",
+                "/images/prop3/bedroom2.jpg",
+                "/images/prop3/bedroom3.png",
+                "/images/prop3/bathroom.webp",
+                "/images/prop3/floor-plan.webp"
+            ],
             "url": "properties/prop4.html",
             "added": {
                 "month": "October",
@@ -56,7 +86,17 @@
         "tenure": "Leasehold",
         "description": "A stylish one-bedroom apartment ideal for first-time buyers or investors. <br>Features include an open-plan kitchen/living area with full-height windows, a modern bathroom, and a spacious bedroom with fitted wardrobes. <br>Located in a secure building with lift access and allocated parking.",
         "location": "High Street Beckenham BR3",
-        "picture": "public/images/prop4.jpg",
+        "picture":"/images/prop4/prop4.jpg",
+        "pictures": [
+            "/images/prop4/prop4.jpg",
+            "/images/prop4/living-room.jpg",
+            "/images/prop4/kitchen.jpg",
+            "/images/prop4/bedroom1.jpg",
+            "/images/prop4/bathroom.webp",
+            "/images/prop4/balcony.jpg",
+            "/images/prop4/garden.jpg",
+            "/images/prop4/floor-plan.jpg"
+        ],
         "url": "properties/prop4.html",
         "added": {
             "month": "August",
@@ -72,7 +112,17 @@
         "tenure": "Freehold",
         "description": "A charming three-bedroom semi-detached house located in a quiet residential area. <br>The property offers a bright lounge, modern kitchen, conservatory, and a generous rear garden. <br>Upstairs are three well-proportioned bedrooms and a contemporary family bathroom.",
         "location": "Maple Close Orpington BR6",
-        "picture": "public/images/prop5.jpg",
+        "picture":"/images/prop5/prop5.jpg",
+        "pictures": [
+            "/images/prop5/prop5.jpg",
+            "/images/prop5/living-room.png",
+            "/images/prop5/kitchen.avif",
+            "/images/prop5/bedroom1.avif",
+            "/images/prop5/bedroom2.jpg",
+            "/images/prop5/bedroom3.jpg",
+            "/images/prop5/bathroom.jpg",
+            "/images/prop5/floor-plan.webp"
+        ],
         "url": "properties/prop5.html",
         "added": {
             "month": "July",
@@ -88,7 +138,17 @@
         "tenure": "Leasehold",
         "description": "A spacious three-bedroom flat boasting modern interiors throughout. <br>The property features a fully fitted kitchen, large reception area, two bathrooms, and a private balcony. <br>Located close to train stations, shops, and cafes.",
         "location": "Canterbury Road Croydon CR0",
-        "picture": "public/images/prop1.jpg",
+        "picture":"/images/prop6/prop6.jpg",
+        "pictures": [
+            "/images/prop6/prop6.jpg",
+            "/images/prop6/living-room.webp",
+            "/images/prop6/kitchen.jpeg",
+            "/images/prop6/bedroom1.jpg",
+            "/images/prop6/bedroom2.webp",
+            "/images/prop6/bedroom3.jpg",
+            "/images/prop6/bathroom.webp",
+            "/images/prop6/floor-plan.jpg"
+        ],
         "url": "properties/prop7.html",
         "added": {
             "month": "May",
@@ -104,7 +164,16 @@
         "tenure": "Freehold",
         "description": "A luxurious five-bedroom detached home offering exceptional living space. <br>Includes a grand entrance hall, two reception rooms, a high-end kitchen, and a beautifully maintained garden. <br>The master suite includes a walk-in wardrobe and en-suite bathroom. <br>Situated in a prestigious residential area.",
         "location": "Royal Drive Chislehurst BR7",
-        "picture": "public/images/prop7.jpg",
+        "picture": "/images/prop7/prop7.jpg",
+        "pictures": [
+            "/images/prop7/prop7.jpg",
+            "/images/prop7/living-room.jpg",
+            "/images/prop7/kitchen.jpg",
+            "/images/prop7/bedroom1.jpg",
+            "/images/prop7/bedroom2.jpg",
+            "/images/prop7/bathroom.jpg",
+            "/images/prop7/garden.jpg"
+        ],
         "url": "properties/prop8.html",
         "added": {
             "month": "November",
