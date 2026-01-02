@@ -9,7 +9,7 @@ import PropertyPage from './components/PropertyPage';
 
 
 function App() {
-  const [submittedTerm, setSubmittedTerm] = useState('');
+  const [filteredProperties, setFilteredProperties] = useState(houseData.properties);
 
   // favourites
   const [favouriteList, setFavouriteList] = useState([]);
@@ -19,13 +19,25 @@ function App() {
   const [notification, setNotification] = useState('');
 
   // search filter
-  const filteredProperties = houseData.properties.filter(property =>
-    property.location.toLowerCase().includes(submittedTerm.toLowerCase()) ||
-    property.type.toLowerCase().includes(submittedTerm.toLowerCase()) ||
-    property.tenure.toLowerCase().includes(submittedTerm.toLowerCase())
-  );
+  // const filteredProperties = houseData.properties.filter(property =>
+  //   property.location.toLowerCase().includes(submittedTerm.toLowerCase()) ||
+  //   property.type.toLowerCase().includes(submittedTerm.toLowerCase()) ||
+  //   property.tenure.toLowerCase().includes(submittedTerm.toLowerCase())
+  // );
 
-  // show toast message
+  const handleSearch = (filters) => {
+    const results = houseData.properties.filter((p) =>
+      (!filters.tenure || p.tenure.toLowerCase() === filters.tenure.toLowerCase()) &&
+      (!filters.type || p.type.toLowerCase() === filters.type.toLowerCase()) &&
+      (!filters.location ||
+        p.location.toLowerCase().includes(filters.location.toLowerCase()))
+    );
+
+    setFilteredProperties(results);
+  };
+
+
+  // show message
   const showNotificationMessage = (message) => {
     setNotification(message);
     setTimeout(() => setNotification(''), 2000);
@@ -41,6 +53,7 @@ function App() {
       showNotificationMessage('Added to favourites ❤️');
       return [...prev, property];
     });
+    setShowFavourites(true);
   };
 
   // remove favourite
@@ -77,13 +90,14 @@ function App() {
             element={
               <>
                 <SearchBar
-                  setSubmittedTerm={setSubmittedTerm}
+                  onSearch = {handleSearch}
                   toggleFavourites={() => setShowFavourites(prev => !prev)}
                 />
 
                 <Gallery
                   properties={filteredProperties}
                   addToFavourites={addToFavourites}
+                  favouriteList={favouriteList}
                 />
               </>
             }
@@ -96,6 +110,7 @@ function App() {
               <PropertyPage
                 addToFavourites={addToFavourites}
                 favouriteList={favouriteList}
+                toggleFavourites={() => setShowFavourites(prev => !prev)}
               />
             }
           />

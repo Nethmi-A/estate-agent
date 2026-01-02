@@ -8,8 +8,7 @@ const ImageCard = ({ property, addToFavourites }) => {
     price,
     picture,
     bedrooms,
-    tenure,
-    description
+    tenure
   } = property;
 
   const handleDragStart = (e) => {

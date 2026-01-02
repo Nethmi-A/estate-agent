@@ -46,7 +46,7 @@ const FavouritePanel = ({
         onDragStart={(e) => 
           e.dataTransfer.setData("removeId", property.id)
         }>
-          <div id='image-wrapper'>
+          <div id='fav-image-wrapper'>
             <img  
             className='favourite-image' 
             src={property.picture} 

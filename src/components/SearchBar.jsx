@@ -1,13 +1,24 @@
 import React, { useState } from 'react';
 import {FaRegHeart} from "react-icons/fa";
 
-const SearchBar = ({setSubmittedTerm, toggleFavourites}) => {
-    const [input, setInput] = useState('');
+const SearchBar = ({onSearch, toggleFavourites}) => {
+
+    const [filters, setFilters] = useState({
+        tenure:"",
+        type: "",
+        location: "",
+    });
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setFilters(prev => ({...prev, [name]: value}));
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setSubmittedTerm(input);
+        onSearch(filters);
     };
+
 
     return(
         <header className="main-header">
@@ -17,16 +28,30 @@ const SearchBar = ({setSubmittedTerm, toggleFavourites}) => {
             </div>
 
     <div className="searchbar">
+        <form className="search-form" onSubmit={handleSubmit}>
+            <select name="tenure" onChange={handleChange}>
+            <option value="">Tenure</option>
+            <option value="freehold">Freehold</option>
+            <option value="leasehold">Leasehold</option>
+            </select>
 
-        <form onSubmit={handleSubmit}>
+            <select name="type" onChange={handleChange}>
+            <option value="">Property Type</option>
+            <option value="House">House</option>
+            <option value="Flat">Flat</option>
+            </select>
+
             <input
-                id="search"
-                type="text"
-                placeholder="Search for properties to buy or rent..."
-                onChange={(e) => setInput(e.target.value)}
+            type="text"
+            name="location"
+            placeholder="Location"
+            onChange={handleChange}
             />
+
+            <button type="submit">Search</button>
         </form>
     </div>
+
 </header>
 
                     
