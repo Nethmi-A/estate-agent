@@ -84,7 +84,7 @@ const PropertyPage = ({addToFavourites, favouriteList, toggleFavourites}) => {
                 <span className="icon">
                     <img
                     className="image-icon"
-                    src="/images/bedroom.png"
+                    src="images/bedroom.png"
                     alt="bedroom icon"
                     />
                 </span>
@@ -96,7 +96,7 @@ const PropertyPage = ({addToFavourites, favouriteList, toggleFavourites}) => {
                 <span className="icon">
                     <img
                     className="image-icon"
-                    src="/images/tenure.png"
+                    src="images/tenure.png"
                     alt="tenure icon"
                     />
                 </span>

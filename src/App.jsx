@@ -13,7 +13,7 @@ function App() {
 
   // favourites
   const [favouriteList, setFavouriteList] = useState([]);
-  const [showFavourites, setShowFavourites] = useState(false);
+  const [showFavourites, setShowFavourites] = useState(true);
 
   // notification
   const [notification, setNotification] = useState('');

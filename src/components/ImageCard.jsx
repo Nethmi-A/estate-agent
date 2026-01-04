@@ -26,12 +26,7 @@ const ImageCard = ({ property, addToFavourites }) => {
         </Link>
         
       </div>
-      {/* <div className='tags'>
-        <span className='icon'>
-          <img className='image-icon' src="public/images/location.png" alt="location-icon" />
-        </span>
-        <span className="location">{location}</span>
-      </div> */}
+      
       <h4 className="location">{location}</h4>
 
       <div className='property-top'>
@@ -46,7 +41,7 @@ const ImageCard = ({ property, addToFavourites }) => {
           <span className="icon">
             <img
               className="image-icon"
-              src="/images/bedroom.png"
+              src="images/bedroom.png"
               alt="bedroom icon"
             />
           </span>
@@ -58,7 +53,7 @@ const ImageCard = ({ property, addToFavourites }) => {
           <span className="icon">
             <img
               className="image-icon"
-              src="/images/tenure.png"
+              src="images/tenure.png"
               alt="tenure icon"
             />
           </span>

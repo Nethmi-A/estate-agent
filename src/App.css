@@ -1,28 +1,19 @@
-/* :root{
-    --primary-color: #3D1301;
-    --secondary-color: #3f2b22;
-    --background-color: rgb(226, 226, 226);
-    --border-color:#9D8F86;
-    --labels:#757575 ;
-    --favourite:#b85151;
-} */
 
 :root {
     /* Core brand */
-    --primary-color: #0F4C5C;      /* Deep teal (trust + stability) */
-    --secondary-color: #5F8D8C;    /* Muted seafoam (soft contrast) */
+    --primary-color: #0F4C5C;      
+    --secondary-color: #5F8D8C;    
 
     /* Surfaces */
-    --background-color: #F4F7F6;   /* Clean off-white */
+    --background-color: #F4F7F6;  
     --card-background: #FFFFFF;
     --off-white-background:#d3d3d3;
 
     /* UI elements */
-    --border-color: #D0D9D8;       /* Soft neutral */
-    --labels: #6B7280;             /* Cool gray */
+    --border-color: #D0D9D8;       
+    --labels: #6B7280;             
 
     /* Accents */
-    /*  --favourite: #E36414;           Burnt orange (eye-catching & uncommon) */
     --success: #3A7D44;
     --favourite:#ff5252;
 
@@ -31,6 +22,77 @@
     /* box shadow */
     --box-shadow: 0 8px 24px rgba(15, 76, 92, 0.12);
     --deep-box-shadow: 0 8px 24px rgba(15, 77, 92, 0.247);
+}
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    body{
+        overflow-x: hidden;
+    }
+    .imageCard {
+        margin: 12px;
+        padding: 16px;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    img,.house-picture , .favourites-panel{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    #image-wrapper {
+        height: 100%;
+        width: auto;
+    }
+    .property-page{
+        padding: 12px;
+    }
+
+    .main-img img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .search-form select,
+    .search-form input {
+        max-width: 100%;
+        max-width: 100%;
+    }
+    .favourites-open .main-content {
+        margin-left: 0;
+    }
+    .thumbnails {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .favourites-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 80vh;
+
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+
+        z-index: 2000;
+    }
+    .favourites-panel.show {
+        transform: translateY(0);
+    }
+    /* disable content shrinking */
+    .favourites-open .main-content {
+        margin-left: 0 !important;
+        transform: none !important;
+    }
+
 }
 
 
@@ -58,20 +120,6 @@
     height: 25px;
     padding-top: -15px;
 }
-/* .house-picture{
-    border-radius: 10px;
-    width: 70%;
-    height: 500px;
-    object-fit: cover;
-}
-
-#image-wrapper  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;           
-    width: 100%;
-} */
 
 #image-wrapper {
     display: flex;
@@ -179,7 +227,7 @@
       rgba(58, 58, 58, 0.349),
       rgba(58, 66, 68, 0.301)
     ),
-    url("/images/search-cover.jpg");
+    url("/images/search-cover.jpeg");
 
     background-size: cover;
     background-position: center;
@@ -286,22 +334,6 @@
     gap: 0.5rem;
 }
 
-/* buttons */
-/* .search-button {
-    background-color: var(--border-color);
-    color: var(--primary-color);
-    border: none;
-
-    padding: 0.5rem 0.75rem;
-    border-radius: 5px;
-
-    cursor: pointer;
-    transition: all 0.25s ease;
-}
-
-.search-button:hover {
-    opacity: 0.85;
-} */
 
 .search-button {
     position: relative;
@@ -356,7 +388,7 @@
     top: 0;
     left: 0;
 
-    width: 300px;          /* panel width */
+    width: 300px;          
     height: 100vh;
 
     background-color: var(--background-color);
@@ -364,7 +396,7 @@
     color: var(--primary-color);
     padding: 1rem;
 
-    transform: translateX(-100%); /* hide offscreen */
+    transform: translateX(-100%); 
     transition: transform 0.3s ease;
     z-index: 1000;
 
@@ -373,7 +405,7 @@
 }
 
 .favourites-panel.show {
-    transform: translateX(0);   /* slide in */
+    transform: translateX(0);   /* slide in the favourite panel */
 }
 
 .favourite-item {
@@ -456,7 +488,7 @@
 
 /* hover effect */
 #cross:hover {
-    background-color: rgba(184, 81, 81, 0.12); /* soft red glow */
+    background-color: rgba(184, 81, 81, 0.12); 
     transform: scale(1.1);
     color: #9e2f2f;
 }
@@ -733,7 +765,6 @@
     
 }
 
-/* Hover = identical behaviour to fav-icon */
 .back-button:hover {
     transform: scale(1.1);
     background-color: #e4e4e4;
@@ -741,12 +772,10 @@
     color: var(--primary-color);
 }
 
-/* Click feedback */
 .back-button:active {
     transform: scale(0.95);
 }
 
-/* Accessibility */
 .back-button:focus-visible {
     outline: 2px solid var(--secondary-color);
     outline-offset: 3px;
