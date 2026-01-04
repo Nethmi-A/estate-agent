@@ -8,7 +8,8 @@ const ImageCard = ({ property, addToFavourites }) => {
     price,
     picture,
     bedrooms,
-    tenure
+    tenure,
+    added
   } = property;
 
   const handleDragStart = (e) => {
@@ -31,7 +32,11 @@ const ImageCard = ({ property, addToFavourites }) => {
 
       <div className='property-top'>
         <span className="price">£{price.toLocaleString()}</span>
+        <span className='date'>
+          Added on: {`${added.day} ${added.month} ${added.year}`}
+        </span>
         <span className="type">{type}</span>
+        
       </div>
       <hr className="divider" />
 

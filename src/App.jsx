@@ -30,7 +30,11 @@ function App() {
       (!filters.tenure || p.tenure.toLowerCase() === filters.tenure.toLowerCase()) &&
       (!filters.type || p.type.toLowerCase() === filters.type.toLowerCase()) &&
       (!filters.location ||
-        p.location.toLowerCase().includes(filters.location.toLowerCase()))
+        p.location.toLowerCase().includes(filters.location.toLowerCase())) &&
+      (filters.minPrice === "" ||
+        p.price >= Number(filters.minPrice)) &&
+      (filters.maxPrice ==="" ||
+        p.price <= Number(filters.maxPrice))
     );
 
     setFilteredProperties(results);

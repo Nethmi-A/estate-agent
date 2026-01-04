@@ -104,11 +104,19 @@ const PropertyPage = ({addToFavourites, favouriteList, toggleFavourites}) => {
                 </div>
             </div>
 
+            {/* tabs */}
+
             <div className="tab-nav">
                 <span
                     className={`tab-item ${activeTab === "description" ? "active": ""}`}
                     onClick={() => setActiveTab("description")}
                 > Description
+                </span>
+
+                <span
+                    className={`tab-item ${activeTab === "floorPlan" ? "active": ""}`}
+                    onClick={() => setActiveTab("floorPlan")}
+                > Floor Plan
                 </span>
 
 
@@ -126,6 +134,16 @@ const PropertyPage = ({addToFavourites, favouriteList, toggleFavourites}) => {
                     {property.description}
                     </p>
                 )}
+
+                {activeTab === "floorPlan" && (
+                    <img
+                    className="floor-plan"
+                    src={property.pictures[property.pictures.length-1]}
+                    alt="floor-plan"
+                    />
+                    
+                )}
+
 
                 {activeTab === "location" && (
                     <iframe

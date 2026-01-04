@@ -19,6 +19,7 @@
                 "images/prop1/bathroom.jpg",
                 "images/prop1/floor-plan.webp"
             ],
+            "floor-plan":  "images/prop1/floor-plan.webp",
 			"url":"properties/prop1.html",
             "added": {
                 "month":"October",
@@ -45,6 +46,7 @@
                 "images/prop2/balcony.jpg",
                 "images/prop2/floor-plan.jpg"
             ],
+            "floor-plan":  "images/prop2/floor-plan.jpg",
 			"url":"properties/prop2.html",
             "added": {
                 "month":"September",
@@ -71,6 +73,7 @@
                 "images/prop3/bathroom.webp",
                 "images/prop3/floor-plan.webp"
             ],
+            "floor-plan":  "images/prop3/floor-plan.webp",
             "url": "properties/prop4.html",
             "added": {
                 "month": "October",
@@ -97,6 +100,7 @@
             "images/prop4/garden.jpg",
             "images/prop4/floor-plan.jpg"
         ],
+        "floor-plan":  "",
         "url": "properties/prop4.html",
         "added": {
             "month": "August",

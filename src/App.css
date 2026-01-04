@@ -62,7 +62,7 @@
     .search-form select,
     .search-form input {
         max-width: 100%;
-        max-width: 100%;
+        width: 70%;
     }
     .favourites-open .main-content {
         margin-left: 0;
@@ -92,7 +92,14 @@
         margin-left: 0 !important;
         transform: none !important;
     }
-
+    /* favourite icon */
+    .fav-icon, .back-button{
+        width: 40px;
+        height: 40px;
+    }
+    .heart-icon, .back-button{
+        font-size: 18px;
+    }
 }
 
 
@@ -242,14 +249,18 @@
 
 /* Favourite icon */
 .fav-icon {
-    width: 48px;
-    height: 48px;
+    /* tto scale based on viweport */
+    width: clamp(36px, 5vw, 48px);
+    height: clamp(36px, 5vw, 48px);
+
     background-color: var(--primary-color);
     border-radius: 50%;
+
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    flex-shrink: 0;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
