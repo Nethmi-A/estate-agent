@@ -25,6 +25,7 @@
 }
 * {
   box-sizing: border-box;
+  font-family: system-ui,sans-serif;
 }
 
 @media (max-width: 1024px) {
@@ -94,12 +95,27 @@
     }
     /* favourite icon */
     .fav-icon, .back-button{
-        width: 40px;
-        height: 40px;
+        width: 2.5em;
+        height: 2.5em;
+        
+        justify-content: center;
+        align-items: center;
     }
-    .heart-icon, .back-button{
+    .nav-icon{
         font-size: 18px;
+        line-height: 1;
     }
+    .fav-icon, .nav-icon {
+        transform: scale(1.15);
+    }
+    .back-button {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .back-button .nav-icon {
+    color: var(--primary-color);
+  }
 }
 
 
@@ -146,9 +162,19 @@
 }
 .property-top {
     display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: var(--primary-color);
+}
+.property-header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--primary-color);
+}
+.date {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--labels);
 }
 
 .price{
@@ -255,6 +281,7 @@
 
     background-color: var(--primary-color);
     border-radius: 50%;
+    margin-right: 15px;
 
     display: flex;
     align-items: center;
@@ -264,8 +291,8 @@
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.heart-icon{
-    font-size: 22px;
+.nav-icon{
+    font-size: 18px;
     color: var(--background-color);
 }
 
@@ -274,7 +301,7 @@
     background-color: #e4e4e4;
     box-shadow: var(--deep-box-shadow);
 }
-.fav-icon:hover .heart-icon {
+.fav-icon:hover .nav-icon {
     color: var(--primary-color);
 }
 
@@ -394,6 +421,7 @@
     width: 100%;
 }
 
+/* ---FAVOURITE PANEL--- */
 .favourites-panel {
     position: fixed;
     top: 0;
@@ -587,6 +615,7 @@
   outline: 2px dashed var(--favourite);
 }
 
+/* ---PROPERTY PAGE--- */
 .main-img img {
   width: 70%;
   height: 500px;
@@ -657,7 +686,6 @@
     max-width: 100vw;
     padding: 20px;
     margin: 0 auto;
-    font-family: system-ui,sans-serif;
     background: linear-gradient(
   180deg,
   #f1f4f5 0%,
@@ -780,6 +808,9 @@
     transform: scale(1.1);
     background-color: #e4e4e4;
     box-shadow: var(--deep-box-shadow);
+    color: var(--primary-color) ;
+}
+.back-button:hover .nav-icon {
     color: var(--primary-color);
 }
 

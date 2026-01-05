@@ -18,6 +18,7 @@ const ImageCard = ({ property, addToFavourites }) => {
 
 
   return (
+    
     <article className='imageCard'
       draggable
       onDragStart={handleDragStart}>
@@ -31,11 +32,14 @@ const ImageCard = ({ property, addToFavourites }) => {
       <h4 className="location">{location}</h4>
 
       <div className='property-top'>
-        <span className="price">£{price.toLocaleString()}</span>
-        <span className='date'>
+        <div className='property-header'>
+          <span className="price">£{price.toLocaleString()}</span>
+          <span className="type">{type}</span>
+        </div>
+        
+        <div className='date'>
           Added on: {`${added.day} ${added.month} ${added.year}`}
-        </span>
-        <span className="type">{type}</span>
+        </div>
         
       </div>
       <hr className="divider" />

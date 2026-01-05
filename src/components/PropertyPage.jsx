@@ -37,11 +37,11 @@ const PropertyPage = ({addToFavourites, favouriteList, toggleFavourites}) => {
                 <button className="back-button" 
                 title="Back to Search"
                 onClick={() => navigate(-1)}>
-                    <FaArrowLeft/>
+                    <FaArrowLeft className="nav-icon"/>
                 </button>
                 <div className='fav-icon' title='See Favourites'
                 onClick={toggleFavourites}>
-                    <FaRegHeart className='heart-icon'/>
+                    <FaRegHeart className='nav-icon'/>
                 </div>
 
                 

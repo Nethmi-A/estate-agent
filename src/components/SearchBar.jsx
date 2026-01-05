@@ -27,7 +27,7 @@ const SearchBar = ({onSearch, toggleFavourites}) => {
            
             <div className='fav-icon' title='See Favourites'
             onClick={toggleFavourites}>
-                <FaRegHeart className='heart-icon'/>
+                <FaRegHeart className='nav-icon'/>
             </div>
 
     <div className="searchbar">
